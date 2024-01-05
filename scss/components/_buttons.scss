@@ -1,0 +1,94 @@
+:root {
+  --Rubik: "Rubik", sans-serif;
+}
+
+.redBtn {
+  width: 111px;
+  height: 40px;
+  border: 2px solid #fa5959;
+  border-radius: 5px;
+  background: #fa5959;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  color: #fff;
+  text-align: right;
+  font-family: var(--Rubik);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  transition-duration: 0.7s;
+  &:hover {
+    border-radius: 5px;
+    background: #fff;
+    color: #fa5959;
+    cursor: pointer;
+  }
+}
+
+.blueBtn {
+  width: 111px;
+  height: 40px;
+  border: 2px solid #5267df;
+  border-radius: 5px;
+  background: #5267df;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  color: #fff;
+  text-align: right;
+  font-family: var(--Rubik);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  transition-duration: 0.7s;
+  &:hover {
+    border-radius: 5px;
+    background: #fff;
+    color: #5267df;
+    cursor: pointer;
+  }
+}
+
+.bigBtn {
+  width: 166px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  font-family: var(--Rubik);
+  font-weight: 500;
+  transition-duration: 0.7s;
+}
+
+.blueBigBtn {
+  @extend .bigBtn;
+  background-color: #5267df;
+  border: 2px solid #5267df;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #5267df;
+  }
+}
+
+.greyBigBtn {
+  @extend .bigBtn;
+  background-color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+  color: hsl(229, 31%, 21%);
+  &:hover {
+    cursor: pointer;
+    border-color: hsl(229, 31%, 21%);
+  }
+}
+
+@media (max-width: 767px) {
+  .bigBtn {
+    width: 146px;
+    height: 48px;
+  }
+}

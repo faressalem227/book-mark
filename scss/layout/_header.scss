@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --Rubik: "Rubik", sans-serif;
+}
+
+.mobile-menu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: #242a45;
+  z-index: 2;
+  .logo-list {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .close {
+      align-self: center;
+    }
+  }
+  ul {
+    margin-top: 50px;
+    min-width: 100%;
+    display: block;
+    opacity: 0.95;
+    padding: 0;
+    width: 375px;
+    hr {
+      width: 309px;
+      height: 1px;
+      opacity: 0.15;
+      background: #fff;
+    }
+
+    li {
+      list-style: none;
+      color: #fff;
+      text-align: center;
+      font-family: var(--Rubik);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px; /* 85% */
+      letter-spacing: 2.308px;
+      text-transform: uppercase;
+      margin: 20px 0 20px;
+
+      button {
+        width: 308px;
+        height: 48px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  .menu-social {
+    width: fit-content;
+    margin: auto;
+    span {
+      display: inline-block;
+      margin: 30px 20px;
+    }
+  }
+}
+
+nav > .container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  .logo {
+    width: 152px;
+    height: 26px;
+    flex-shrink: 0;
+    background-image: url(images/logo-bookmark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mobileIcon {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    li {
+      list-style: none;
+      color: #242a45;
+      text-align: right;
+      font-family: var(--Rubik);
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px; /* 130.769% */
+      letter-spacing: 1.5px;
+      margin-left: 20px;
+      transition-duration: 0.2s;
+      &:hover {
+        color: #fa5959;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 4777px;
+  }
+
+  .cIcon {
+    display: none;
+  }
+
+  nav > .container {
+    .mobileIcon {
+      width: 18px;
+      height: 15px;
+      display: block;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}

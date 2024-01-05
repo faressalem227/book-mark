@@ -1,0 +1,115 @@
+:root {
+  --Rubik: "Rubik", sans-serif;
+}
+
+// body {
+// }
+
+.simpleBookmark {
+  margin-top: 50px;
+  overflow: hidden;
+  height: 427px;
+  .container {
+    display: flex;
+  }
+  .info {
+    flex-basis: 50%;
+    margin-top: 10px;
+  }
+  h1 {
+    width: 540px;
+    color: #242a45;
+    font-family: var(--Rubik);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px; /* 108.333% */
+    letter-spacing: -0.15px;
+  }
+
+  p {
+    width: 540px;
+    color: hsl(229, 8%, 60%);
+    font-family: var(--Rubik);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+  }
+
+  .image {
+    height: 394.865px;
+    flex-basis: 50%;
+    position: relative;
+    background-image: url(images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      width: 1000px;
+      height: 352px;
+      flex-shrink: 0;
+      background: #5267df;
+      position: absolute;
+      z-index: -1;
+      left: 111px;
+      bottom: -29px;
+      border-top-left-radius: 316.5px;
+      border-bottom-left-radius: 316.5px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .simpleBookmark {
+    margin-top: 50px;
+    overflow: hidden;
+    height: fit-content;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-between;
+      flex-wrap: wrap;
+    }
+    .info {
+      width: 100%;
+      order: 1;
+      flex-basis: 50%;
+      margin: 100px auto 0;
+    }
+    h1 {
+      width: 311px;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+    }
+
+    p {
+      width: 311px;
+      font-size: 15px;
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .image {
+      order: 0;
+      width: 308.742px;
+      min-height: 204.806px;
+      margin: auto;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 577px;
+        height: 203px;
+      }
+    }
+    button {
+      display: block;
+      margin: 30px auto 0;
+    }
+  }
+}

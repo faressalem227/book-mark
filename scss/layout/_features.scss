@@ -1,0 +1,276 @@
+:root {
+  --Rubik: "Rubik", sans-serif;
+}
+
+.selectedItem {
+  color: #242a45;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    background-color: #fa5959;
+    width: 243px;
+    height: 4px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: -40px;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+}
+
+.hide {
+  display: none;
+  transition-duration: 0.5s;
+}
+
+.features {
+  margin-top: 60px;
+  height: 815px;
+  overflow-x: hidden;
+  .container > h1 {
+    width: 348px;
+    color: #242a45;
+    text-align: center;
+    font-family: var(--Rubik);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px; /* 162.5% */
+    letter-spacing: -0.1px;
+    margin: auto;
+  }
+
+  .container > p {
+    width: 540px;
+    color: #242a45;
+    text-align: center;
+    font-family: var(--Rubik);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    opacity: 0.5;
+    margin: 10px auto 40px;
+  }
+
+  ul {
+    margin: 0 auto 40px;
+    padding: 0;
+    display: flex;
+    width: 600px;
+    column-gap: 70px;
+
+    li {
+      list-style: none;
+      color: hsl(229, 8%, 60%);
+      font-family: var(--Rubik);
+      font-weight: 400;
+      font-size: 18px;
+      transition-duration: 0.2s;
+      &:hover {
+        color: #fa5959;
+        cursor: pointer;
+      }
+    }
+    hr {
+      display: none;
+    }
+  }
+
+  hr {
+    width: 730px;
+    height: 1px;
+    flex-shrink: 0;
+    background: rgba(73, 93, 207, 0.2);
+  }
+}
+
+.tabItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  .info {
+    margin-top: 10px;
+  }
+  h1 {
+    width: 348px;
+    color: #242a45;
+    font-family: var(--Rubik);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px; /* 162.5% */
+    letter-spacing: -0.1px;
+  }
+
+  p {
+    width: 445px;
+    color: #242a45;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    opacity: 0.5;
+  }
+
+  .image {
+    position: relative;
+    &::after {
+      content: "";
+      width: 1000px;
+      height: 352px;
+      flex-shrink: 0;
+      background: #5267df;
+      position: absolute;
+      z-index: -1;
+      left: -580px;
+      bottom: -97px;
+      border-top-right-radius: 316.5px;
+      border-bottom-right-radius: 316.5px;
+    }
+  }
+}
+
+.bookmarkCard {
+  img {
+    width: 536px;
+    height: 346px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #e8eaf6;
+  }
+}
+
+.speedySearchCard {
+  img {
+    width: 468px;
+    height: 393px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .selectedItem {
+    color: #242a45;
+    position: relative;
+    &::after {
+      width: 143px;
+      height: 4px;
+      bottom: -18px;
+      left: 0;
+      transform: translate(-50%, 0);
+      left: 50%;
+      flex-shrink: 0;
+    }
+  }
+
+  .features {
+    height: fit-content;
+    .container > h1 {
+      width: 311px;
+      font-size: 24px;
+    }
+
+    .container > p {
+      width: 311px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    ul {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: fit-content;
+      li {
+        font-size: 16px;
+        width: fit-content;
+        text-align: center;
+        margin: 10px auto;
+        ::after {
+          width: 143px;
+          height: 4px;
+          bottom: -75px;
+          flex-shrink: 0;
+        }
+      }
+      hr {
+        display: block;
+      }
+    }
+
+    hr {
+      width: 311px;
+      height: 1px;
+      display: none;
+    }
+  }
+
+  .tabItem {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    min-height: fit-content;
+    .info {
+      margin-top: 100px;
+    }
+    h1 {
+      width: 311px;
+      font-size: 24px;
+      text-align: center;
+      margin: auto;
+    }
+
+    p {
+      width: 311px;
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .image {
+      position: relative;
+      &::after {
+        width: 577px;
+        height: 203px;
+        left: -319px;
+        bottom: -54px;
+      }
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+    }
+  }
+
+  .bookmarkCard {
+    img {
+      width: 311px;
+      height: 201px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .speedySearchCard {
+    img {
+      width: 311px;
+      height: 201px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .EasySharing {
+    img {
+      width: 311px;
+      height: 201px;
+      display: block;
+      margin: auto;
+    }
+  }
+}

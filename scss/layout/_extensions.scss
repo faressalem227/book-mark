@@ -1,0 +1,157 @@
+:root {
+  --Rubik: "Rubik", sans-serif;
+}
+
+.extensions {
+  margin-top: 60px;
+
+  h1 {
+    width: 540px;
+    color: #242a45;
+    text-align: center;
+    font-family: var(--Rubik);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: -0.1px;
+    margin: auto;
+  }
+
+  .container > P {
+    width: 540px;
+    color: #242a45;
+    text-align: center;
+    font-family: var(--Rubik);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    opacity: 0.5;
+    margin: auto;
+  }
+
+  .browsers {
+    display: flex;
+    width: 911px;
+    height: 451px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    margin: 50px auto 0;
+
+    .card {
+      width: 280px;
+      height: 371px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+
+      .icon {
+        width: 102px;
+        height: 100px;
+        margin: 30px 89.5px;
+      }
+
+      h4 {
+        width: fit-content;
+        color: #242a45;
+        text-align: center;
+        font-family: var(--Rubik);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.25px;
+        margin: auto;
+      }
+
+      p {
+        width: 220px;
+        color: #242a45;
+        text-align: center;
+        font-family: var(--Rubik);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 186.667% */
+        opacity: 0.5;
+        margin: auto;
+      }
+    }
+
+    .dots {
+      margin: 30px 0;
+      height: 4px;
+      width: 100%;
+      background-image: url(images/bg-dots.svg);
+      background-position: center;
+      background-size: contain;
+    }
+
+    button {
+      width: 232px;
+      height: 48px;
+      border: 2px solid #5267df;
+      border-radius: 5px;
+      background: #5267df;
+      box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+      color: #fff;
+      text-align: center;
+      font-family: var(--Rubik);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0.25px;
+      transition-duration: 0.7s;
+      display: block;
+      margin: auto;
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #5267df;
+      }
+    }
+
+    .fireFox {
+      margin-top: 30px;
+    }
+
+    .opera {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .extensions {
+    margin-top: 60px;
+
+    h1 {
+      width: 311px;
+      font-size: 24px;
+    }
+
+    .container > P {
+      width: 311px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    .browsers {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: fit-content;
+      min-height: 1205px;
+      .fireFox {
+        margin-top: 30px;
+      }
+
+      .opera {
+        margin-top: 30px;
+      }
+    }
+  }
+}
